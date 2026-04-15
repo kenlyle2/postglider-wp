@@ -1,0 +1,11 @@
+{
+  "name": "PostGlider Gallery Adapter",
+  "slug": "postglider-adapter",
+  "version": "0.2.0",
+  "requires": "6.0",
+  "requires_php": "8.0",
+  "download_url": "https://github.com/kenlyle2/postglider-wp/releases/download/v0.2.0/postglider-adapter.zip",
+  "sections": {
+    "changelog": "<h4>0.2.0</h4><ul><li>GPL-2.0-or-later license</li><li>Version constant</li><li>i18n on admin strings</li><li>apikey header for Supabase gateway</li><li>network-api configure-site endpoint</li></ul>"
+  }
+}

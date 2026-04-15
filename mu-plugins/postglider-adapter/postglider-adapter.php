@@ -22,3 +22,4 @@ require_once POSTGLIDER_ADAPTER_DIR . 'includes/auth.php';
 require_once POSTGLIDER_ADAPTER_DIR . 'includes/search.php';
 require_once POSTGLIDER_ADAPTER_DIR . 'includes/admin-settings.php';
 require_once POSTGLIDER_ADAPTER_DIR . 'includes/network-api.php';
+require_once POSTGLIDER_ADAPTER_DIR . 'includes/updater.php';
