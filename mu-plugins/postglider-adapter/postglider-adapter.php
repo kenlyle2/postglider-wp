@@ -8,7 +8,6 @@
  * Author URI:        https://postglider.com
  * License:           Proprietary
  * Text Domain:       postglider-adapter
- * Network:           true
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
