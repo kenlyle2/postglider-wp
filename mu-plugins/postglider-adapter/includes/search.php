@@ -40,8 +40,10 @@ function pg_search_handler( WP_REST_Request $request ) {
 
     $supabase_url  = pg_get_option( 'supabase_url' );
     $gallery_token = pg_get_option( 'gallery_token' );
+    // anon key is network-wide (same for all subsites)
+    $anon_key      = get_site_option( 'postglider_anon_key', '' );
 
-    if ( ! $supabase_url || ! $gallery_token ) {
+    if ( ! $supabase_url || ! $gallery_token || ! $anon_key ) {
         return new WP_Error( 'pg_not_configured', 'PostGlider adapter not configured.', [ 'status' => 503 ] );
     }
 
@@ -52,6 +54,7 @@ function pg_search_handler( WP_REST_Request $request ) {
         'headers' => [
             'X-Gallery-Token' => $gallery_token,
             'Content-Type'    => 'application/json',
+            'apikey'          => $anon_key,
         ],
         'body' => wp_json_encode( [ 'q' => $q, 'limit' => $limit ] ),
     ] );
