@@ -26,7 +26,7 @@ $files[ $plugin_dir . '/postglider-adapter.php' ] = <<<'PHP'
  * Plugin Name:       PostGlider Gallery Adapter
  * Plugin URI:        https://postglider.com
  * Description:       Connects your PostGlider AI-tagged Media Vault to WordPress via a searchable REST endpoint.
- * Version:           0.2.0
+ * Version:           0.2.1
  * Author:            PostGlider
  * Author URI:        https://postglider.com
  * License:           GPL-2.0-or-later
@@ -38,7 +38,7 @@ $files[ $plugin_dir . '/postglider-adapter.php' ] = <<<'PHP'
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'POSTGLIDER_ADAPTER_VERSION', '0.2.0' );
+define( 'POSTGLIDER_ADAPTER_VERSION', '0.2.1' );
 define( 'POSTGLIDER_ADAPTER_DIR', plugin_dir_path( __FILE__ ) );
 
 require_once POSTGLIDER_ADAPTER_DIR . 'includes/auth.php';
@@ -130,6 +130,7 @@ function pg_search_handler( WP_REST_Request $request ) {
             'X-Gallery-Token' => $gallery_token,
             'Content-Type'    => 'application/json',
             'apikey'          => $anon_key,
+            'Authorization'   => 'Bearer ' . $anon_key,
         ],
         'body' => wp_json_encode( [ 'q' => $q, 'limit' => $limit ] ),
     ] );
@@ -365,7 +366,7 @@ code{display:block;margin-top:10px;font-size:13px;word-break:break-all}</style>
 <?php if ( empty( $errors ) ) :
     @unlink( __FILE__ ); ?>
     <div class="ok">
-        <strong>✓ PostGlider Adapter v0.2.0 installed successfully.</strong>
+        <strong>✓ PostGlider Adapter v0.2.1 installed successfully.</strong>
         <p>Plugin files written to <code>wp-content/plugins/postglider-adapter/</code></p>
         <ol>
             <li>Go to <strong>Network Admin → Plugins</strong></li>

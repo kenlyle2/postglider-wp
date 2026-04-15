@@ -55,6 +55,7 @@ function pg_search_handler( WP_REST_Request $request ) {
             'X-Gallery-Token' => $gallery_token,
             'Content-Type'    => 'application/json',
             'apikey'          => $anon_key,
+            'Authorization'   => 'Bearer ' . $anon_key,
         ],
         'body' => wp_json_encode( [ 'q' => $q, 'limit' => $limit ] ),
     ] );
