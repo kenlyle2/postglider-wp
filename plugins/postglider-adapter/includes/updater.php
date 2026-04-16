@@ -22,6 +22,14 @@ define( 'POSTGLIDER_ADAPTER_METADATA_URL',
 );
 
 /**
+ * When WordPress performs a forced update check ("Check Again"), clear our
+ * metadata cache so the fresh fetch picks up the latest metadata.json.
+ */
+add_action( 'wp_update_plugins', function () {
+    delete_site_transient( 'postglider_adapter_metadata' );
+} );
+
+/**
  * Inject update info into WordPress's transient before it's consumed.
  */
 add_filter( 'pre_set_site_transient_update_plugins', 'pg_check_for_update' );

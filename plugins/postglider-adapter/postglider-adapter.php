@@ -3,7 +3,7 @@
  * Plugin Name:       PostGlider Gallery Adapter
  * Plugin URI:        https://postglider.com
  * Description:       Connects your PostGlider AI-tagged Media Vault to WordPress via a searchable REST endpoint.
- * Version:           0.2.2
+ * Version:           0.2.3
  * Author:            PostGlider
  * Author URI:        https://postglider.com
  * License:           GPL-2.0-or-later
@@ -15,7 +15,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'POSTGLIDER_ADAPTER_VERSION', '0.2.2' );
+define( 'POSTGLIDER_ADAPTER_VERSION', '0.2.3' );
 define( 'POSTGLIDER_ADAPTER_DIR', plugin_dir_path( __FILE__ ) );
 
 require_once POSTGLIDER_ADAPTER_DIR . 'includes/auth.php';

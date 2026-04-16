@@ -1,11 +1,11 @@
 {
   "name": "PostGlider Gallery Adapter",
   "slug": "postglider-adapter",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "requires": "6.0",
   "requires_php": "8.0",
-  "download_url": "https://github.com/kenlyle2/postglider-wp/releases/download/v0.2.2/postglider-adapter.zip",
+  "download_url": "https://github.com/kenlyle2/postglider-wp/releases/download/v0.2.3/postglider-adapter.zip",
   "sections": {
-    "changelog": "<h4>0.2.2</h4><ul><li>Add pg_gallery_image CPT for SearchIQ indexing</li><li>Add sync-image endpoint: creates/updates stub posts from PostGlider Media Vault</li></ul><h4>0.2.1</h4><ul><li>Fix: add Authorization: Bearer header required by Supabase API gateway</li></ul><h4>0.2.0</h4><ul><li>GPL-2.0-or-later license</li><li>Version constant + auto-updater via GitHub releases</li><li>i18n on admin strings</li><li>apikey header for Supabase gateway</li><li>network-api configure-site endpoint</li></ul>"
+    "changelog": "<h4>0.2.3</h4><ul><li>Fix: bust metadata cache on WP forced update check so Check Again works immediately</li></ul><h4>0.2.2</h4><ul><li>Add pg_gallery_image CPT for SearchIQ indexing</li><li>Add sync-image endpoint: creates/updates stub posts from PostGlider Media Vault</li></ul><h4>0.2.1</h4><ul><li>Fix: add Authorization: Bearer header required by Supabase API gateway</li></ul><h4>0.2.0</h4><ul><li>GPL-2.0-or-later license</li><li>Version constant + auto-updater via GitHub releases</li><li>i18n on admin strings</li><li>apikey header for Supabase gateway</li><li>network-api configure-site endpoint</li></ul>"
   }
 }
